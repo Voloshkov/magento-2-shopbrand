@@ -117,23 +117,23 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic implements \Magent
         );
 
 
-        // $fieldset->addField('meta_key', 'text',
-        //     [
-        //         'label' => __('Meta Keywords'),
-        //         'title' => __('Meta Keywords'),
-        //         'name'  => 'meta_key',
-        //         'required' => false,
-        //     ]
-        // );
+        $fieldset->addField('meta_key', 'text',
+             [
+                 'label' => __('Meta Keywords'),
+                 'title' => __('Meta Keywords'),
+                 'name'  => 'meta_key',
+                 'required' => false,
+             ]
+         );
 
-        // $fieldset->addField('meta_description', 'text',
-        //     [
-        //         'label' => __('Meta Description'),
-        //         'title' => __('Meta Description'),
-        //         'name'  => 'meta_description',
-        //         'required' => false,
-        //     ]
-        // );
+        $fieldset->addField('meta_description', 'text',
+             [
+                 'label' => __('Meta Description'),
+                 'title' => __('Meta Description'),
+                 'name'  => 'meta_description',
+                 'required' => false,
+             ]
+         );
 
         $brandOptions = $this->_brand->toOptionArray();
         if(array_filter($brandOptions)){

@@ -105,6 +105,14 @@ class View extends \Magiccart\Shopbrand\Block\Brand implements \Magento\Framewor
                 'title' => $title
             ]);
             $this->pageConfig->getTitle()->set(__($title));
+
+            if ($brand->getMetaDescription()) {
+                $this->pageConfig->setDescription($brand->getMetaDescription());
+            }
+            if ($brand->getMetaKey()) {
+                $this->pageConfig->setKeywords($brand->getMetaKey());
+            }
+
         }
         return parent::_prepareLayout();
     }
