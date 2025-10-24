@@ -122,4 +122,10 @@ class Save extends \Magiccart\Shopbrand\Controller\Adminhtml\Action
 
         return $resultRedirect->setPath('*/*/');
     }
+
+    protected function _isAllowed()
+    {
+        return $this->_authorization->isAllowed('Magiccart_Shopbrand::brand_save');
+    }
+
 }
